@@ -1,7 +1,7 @@
 # Exp Library
 Open library to add exp (achievements) to your games. The library is designed to be FAST for gp2x console and pc.
 
-The library is designed thinking about GP2X console, so the objective is to be fast.
+The library is designed thinking about GP2X console, so the objective is to be fast, and is writen in C++.
 
 GP2X games execute from a SD card, the library need to save the exps (achievements) enough fast to avoid lag or stop in the game.
 
