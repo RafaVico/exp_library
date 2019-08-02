@@ -1,18 +1,16 @@
-# exp_library
+# Exp Library
 Open library to add exp (achievements) to your games. The library is designed to be FAST for gp2x console and pc.
 
 The library is designed thinking about GP2X console, so the objective is to be fast.
 
-GP2X games execute from a SD card, the library need to save the exps (achievements) enough
-fast to avoid lag or stop in the game.
+GP2X games execute from a SD card, the library need to save the exps (achievements) enough fast to avoid lag or stop in the game.
 
-Exp Library is divided by:
-	- CORE. Main module, with functions that check the exps and save only the needed data to mark them (a little bytes).
-	- SDL. Graphic module wich show the messages using SDL library. It's easy to add more modules with another graphic libraries.
+Exp Library is divided by:<br>
+	- CORE. Main module, with functions that check the exps and save only the needed data to mark them (a little bytes).<br>
+	- SDL. Graphic module wich show the messages using SDL library. It's easy to add more modules with another graphic libraries.<br>
 
 
 # Games & Tools
-
 Games and tools using this library are:
 
 EXP APPLICATION
