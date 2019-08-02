@@ -1,0 +1,137 @@
+CONSTANTES USADAS POR LA LIBRERIA EXP (exp_core).
+
+#define EXP_ERROR     0
+#define EXP_READY     1
+#define EXP_COMPLETE  2
+
+Es el valor que devuelve la función exp_init().
+EXP_ERROR, significa que no existe ninguna carpeta EXP o no existe ningún perfil activo.
+EXP_READY, significa que ha cargado un perfil y las experiencias, pero no exite descripción de estos.
+           Se puede jugar sin problemas, pero no veremos los mensajes de aviso.
+EXP_COMPLETE, significa que ha cargado el perfil, experiencias y descripción.
+
+#define EXP_MAX_EXPERIENCE  50
+#define EXP_MAX_POINTS      1000
+
+Los juegos estarán limitados en cuanto al número de experiencias y puntos. Habrá
+un máximo de 50 experiencias y 1000 puntos por juego. No es divertido que hagan un
+juego con una experiencia de un trillón de puntos.
+
+
+
+FUNCIONES USADAS POR LA LIBRERIA EXP
+
+Los datos de los perfiles, experiencias, etc... se guardan en la raíz de la tarjeta SD, en
+caso de usar GP2X o WIZ, o en la carpeta "Documents and settings/all users/datos de programa/exp"
+en caso de usar windows (el nombre puede variar según el idioma de windows).
+
+
+int exp_init(char* author, char* game);
+
+Inicia la librería. Le pasamos los parámetros "author" y "game", que son cadenas de texto.
+author es el nombre del creador (programador, equipo, empresa...) y game el título del
+juego.
+
+Internamente: de la carpeta EXP de datos, leerá el archivo "activeexp", que contiene el nombre
+del perfil activo. Dentro de la carpeta del perfil activo creará una nueva carpeta para
+guardar los datos del juego. La carpeta se llamará "autor_juego", para evitar repeticiones y
+conflictos de nombres. Dentro de esta carpeta se guardarán todos los datos del juego.
+
+
+int exp_add(int id, int value, int secret=0);
+
+Añade una experiencia (o logro). Le asignaremos un "id" mayor de 0 y un "value" (valor).
+Si la suma de todas las experiencias supera el máximo permitido, la experiencia no se guardará.
+Si se trata de una experiencia secreta, el último parámetro "secret" lo marcaremos como 1.
+
+
+int exp_add_desc(int id, char* name, char* desc, char* lang=NULL);
+
+Añade una descripción de experiencia. "id" es la experiencia que vamos a añadir. "name" es
+el nombre de la experiencia, con un límite de 20 caracteres. "desc" es la descripción de la
+experiencia, lo que hay que hacer, etc... El último parámetro "lang" es el idioma de esa
+descripción. Si lo dejamos como NULO, el idioma se guardará como "default". Si ponemos
+el nombre del idioma "Spanish", "English", etc... a la hora de jugar, se mostrarán los
+mensajes en el idioma predeterminado del EXP (perfil) activo, por lo que es conveniente
+meter el idioma en los juegos multi-idioma.
+
+
+int exp_add_img(int id, char* img);
+
+Asignamos una imagen "img" a la experiencia "id". img es el nombre del archivo, y hay que
+tener en cuenta que podemos meter rutas relativas "data/images/exp01.bmp". Debe ser un
+archivo .bmp de tamaño 24x24. Los pixeles transparentes son de color (255,0,255).
+
+
+int exp_add_icon(char* img);
+
+Añadimos el icono del juego que se mostrará entre los juegos favoritos del EXP (perfil) activo.
+Las propiedades son las mismas que las imágenes de las experiencias.
+
+
+int exp_set_lang(char* lang);
+
+Si queremos cambiar el idioma de los logros por alguna razón, lo haremos con esta función.
+En "lang" pasaremos el idioma como cadena texto.
+
+
+void exp_win(int id);
+
+Esta es la función principal de la librería. Cada vez que llamamos a esta función, la
+experiencia "id" se marcará como conseguida (si no la teníamos aún, en ese caso no pasará
+absolutamente nada). También se llamará a la función externa callback(), con los parámetros
+(int id, int value, char* name, char* desc), que se encargará de mostrar los mensajes y
+notificaciones.
+ 
+
+char* exp_get_lang();
+
+Devuelve el idioma del EXP (perfil) activo.
+
+
+char* exp_user();
+
+Devuelve el nombre del EXP (perfil) activo. Util si se quiere guardar en una tabla de
+records, o usarlo directamente en un juego de rol ;)
+
+
+int exp_get_value(int id);
+
+Devuelve el valor de la experiencia "id". No se usará mucho, pero ahí está, por si acaso.
+
+
+int exp_get_won(int id);
+
+Nos indica si la experiencia "id" ha sido conseguida o no.
+
+
+char* exp_get_name(int id);
+
+Devuelve el nombre de la experiencia "id".
+
+
+char* exp_get_desc(int id);
+
+Devuelve la descripción de la experiencia "id" en el idioma actual.
+
+
+char* exp_data_path();
+
+Devuelve la ruta de datos del juego para el EXP (perfil) activo. Esto nos permite que
+cada perfil tenga sus propias partidas guardadas y que no afecten al resto de perfiles.
+Util si la consola es utilizada por varias personas.
+
+
+void exp_set_callback(void (*callback)(int,int,char*,char*));
+
+Aquí establecemos la función que recibirá los mensajes callback generados por exp_win().
+Los datos que se enviarán son: (int id, int value, char* name, char* desc) .
+"id" el id de la experiencia conseguida. Nota: el sistema envía un aviso con "id"=0 para
+indicar qué EXP ha iniciado sesión. 
+"value" es el valor de la experiencia.
+"name" es el nombre de la experiencia.
+"desc" es la descripción de la experiencia en el idioma actual.
+
+Si el juego se programa en C++ con SDL, se puede usar la librería exp_sdl para mostrar
+estos mensajes. Esta librería ya dispone de esta función que hace todo el trabajo ella
+solita.

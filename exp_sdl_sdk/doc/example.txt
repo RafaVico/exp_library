@@ -1,0 +1,57 @@
+Example of use of EXP LIBRARY.
+
+/////////////////////////////////////////////////////////////////////////////
+int init_exp()
+{
+  if(exp_init("AuthorName","The Name Of The Game")==EXP_READY)
+  {
+    // if not done, create exp items.
+    exp_add(1,10);
+    exp_add(2,20);
+    exp_add_desc(1,"You are cool.","You hit a score greater than 10.","English");
+    exp_add_desc(2,"You are very cool.","You killed the boss.","English");
+
+    // add images to the exp items.
+    for(int i=0; i<2; i++)
+    {
+      char n[20];
+      sprintf(n,"data/exp0%i.bmp",i+1);
+      exp_add_img(i+1,n);
+    }
+
+    // add an image to game exp.
+    exp_add_icon("data/exp.icon.bmp");
+  }
+}
+
+int program_logic()
+{
+	if(score>10)
+		exp_win(1);	// get Exp1
+	if(boss_killed())
+		exp_win(2);	// get Exp2
+}
+
+int main(int argc, char *argv[])
+{
+  if(SDL_Init(SDL_INIT_JOYSTICK | SDL_INIT_VIDEO | SDL_INIT_AUDIO)<0)
+	return 0;
+
+  screen = SDL_SetVideoMode(320, 240, 16, SDL_SWSURFACE);
+	if(screen==NULL)
+		return 0;
+
+  init_exp();
+
+  while(is_game_running)
+	{
+		program_logic();
+		exp_update();		// show EXP messages at screen
+		SDL_Flip(screen);
+	}
+}
+
+  exp_end();
+
+  return 1;
+}

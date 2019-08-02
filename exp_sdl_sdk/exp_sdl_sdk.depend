@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1283687483 source:d:\proyectos\gp2x\_remaster\exp_sdl_sdk\src\main.c
+	<fstream>
+	<string>
+	<vector>
+	<sys/stat.h>
+	<dirent.h>
+	<SDL/SDL.h>
+	<SDL/SDL_mixer.h>
+	<SDL/SDL_ttf.h>
+	"../inc/backexp_bmp.h"
+	"../inc/backexp2_bmp.h"
+	"../inc/font.h"
+
+1281900557 d:\proyectos\gp2x\_remaster\exp_sdl_sdk\inc\backexp_bmp.h
+
+1281898536 d:\proyectos\gp2x\_remaster\exp_sdl_sdk\inc\backexp2_bmp.h
+
+1281969448 d:\proyectos\gp2x\_remaster\exp_sdl_sdk\inc\font.h
+

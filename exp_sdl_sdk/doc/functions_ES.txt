@@ -1,0 +1,39 @@
+FUNCIONES USADAS POR LA LIBRERIA EXP_SDL.
+
+La librería exp_sdl se usa exclusimavente para mostrar los mensajes y notificaciones
+de exp_core. Para ello, hace uso de las librerías SDL y SDL_ttf. 
+
+
+void exp_screen(SDL_Surface* screen);
+
+Asignamos la superficie SDL "screen" en la que mostraremos los mensajes. Suele ser la
+superficie de pantalla del juego.
+
+
+void exp_osd(int value);
+
+Con esta función podremos indicar si queremos que se muestren en pantalla los mensajes
+de la librería. Si "value" es 0 no se mostrarán, y si es 1 se mostrarán. Por defecto,
+los mensajes se muestran en pantalla.
+
+
+void exp_update();
+
+Esta función es la que se encarga de "dibujar" realmente el mensaje, con los tiempos
+adecuados. Normalmente se coloca justo antes de SDL_Flip(), para que al hacer el
+dibujado muestre los mensajes que tenga almacenados. Si no tiene ninguno, no hace
+nada.
+
+
+void exp_end();
+
+Función que se llama al salir del juego. Libera la memoria, etc...
+
+
+void exp_callback(int id, int value, char* name, char* desc);
+
+Esta es la función que recibe los mensajes de exp_core y los guarda en una lista
+interna. Estos mensajes se mostrarán a su debido tiempo gracias a exp_update().
+Los parámetros que recibe son "id", el código de la experiencia. "value" el valor
+de la experiencia. "name" el nomre de la experiencia. "desc" la descripción de la
+experiencia.

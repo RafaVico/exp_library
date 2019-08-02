@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1327095155 source:d:\proyectos\gp2x\_remaster\exp_core_sdk\src\main.c
+	<fstream>
+	<string>
+	<vector>
+	<sys/stat.h>
+	<dirent.h>
+	<shlobj.h>
+
