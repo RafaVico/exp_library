@@ -9,7 +9,7 @@ Exp Library is divided by:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;- CORE. Main module, with functions that check the exps and save only the needed data to mark them (a little bytes).<br>
 &nbsp;&nbsp;&nbsp;&nbsp;- SDL. Graphic module wich show the messages using SDL library. It's easy to add more modules with another graphic libraries.<br>
 
-#Cons
+# Cons
 
 Is not the best written library because it was using only for my games.
 Security is low or nothing. It have a simple way of offuscating the exp texts.
