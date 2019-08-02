@@ -1,0 +1,4 @@
+This files have to be include in games:
+
+#include <exp_core.h>
+#include <exp_sdl.h>
