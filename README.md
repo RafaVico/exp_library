@@ -11,7 +11,7 @@ Exp Library is divided by:<br>
 
 # Cons
 
-Is not the best written library because it was using only for my games.
+Is not the best written library because it was using only for my games.<br>
 Security is low or nothing. It have a simple way of offuscating the exp texts.
 
 # Games & Tools
