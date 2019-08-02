@@ -13,10 +13,14 @@ Exp Library is divided by:<br>
 # Games & Tools
 Games and tools using this library are:
 
-<img src="https://img.itch.zone/aW1hZ2UvNDQ3NDQ5LzIyNjA5NDEucG5n/347x500/ys%2F6UB.png" alt="Exp Application">
+<table>
+<tr>
+<td>
 EXP APPLICATION<br>
 With this application you can create a profile for using in games with Exp.<br>
-https://rafavico.itch.io/expapp<br><br>
+https://rafavico.itch.io/expapp</td>
+<td><img src="https://img.itch.zone/aW1hZ2UvNDQ3NDQ5LzIyNjA5NDEucG5n/347x500/ys%2F6UB.png" alt="Exp Application"></td>
+</table>
 
 BATHYSCAPHE<br>
 A little game to learn using the library.<br>
