@@ -19,7 +19,7 @@ Games and tools using this library are:
 <b>EXP APPLICATION</b><br>
 With this application you can create a profile for using in games with Exp.<br>
 https://rafavico.itch.io/expapp</td>
-<td><img src="https://img.itch.zone/aW1hZ2UvNDQ3NDQ5LzIyNjA5NDEucG5n/347x500/ys%2F6UB.png" alt="Exp Application"></td>
+<td><img src="https://img.itch.zone/aW1hZ2UvNDQ3NDQ5LzIyNjA5NDEucG5n/347x500/ys%2F6UB.png" alt="Exp Application"><img src="https://img.itch.zone/aW1hZ2UvNDQ3NDQ5LzIyNjA5NDUucG5n/347x500/xqQugk.png" alt="Exp Application"></td>
 </tr>
 <tr>
 <td>
