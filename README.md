@@ -9,6 +9,10 @@ Exp Library is divided by:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;- CORE. Main module, with functions that check the exps and save only the needed data to mark them (a little bytes).<br>
 &nbsp;&nbsp;&nbsp;&nbsp;- SDL. Graphic module wich show the messages using SDL library. It's easy to add more modules with another graphic libraries.<br>
 
+#Cons
+
+Is not the best written library because it was using only for my games.
+Security is low or nothing. It have a simple way of offuscating the exp texts.
 
 # Games & Tools
 Games and tools using this library are:
@@ -30,28 +34,28 @@ https://rafavico.itch.io/bathyscaphe</td>
 </tr>
 <tr>
 <td>
-ULTRATUMBA<br>
+<b>ULTRATUMBA</b><br>
 A puzzle game against the cpu or another player.<br>
 https://rafavico.itch.io/ultratumba</td>
 <td><img src="https://img.itch.zone/aW1nLzIyNzU3ODUucG5n/original/bH3G2p.png" alt="Ultratumba"></td>
 </tr>
 <tr>
 <td>
-ROCK RAIN 2<br>
+<b>ROCK RAIN 2</b><br>
 A platform game where you can play alone or with a friend.<br>
 https://rafavico.itch.io/rock-rain-2</td>
 <td><img src="https://img.itch.zone/aW1nLzIyNjA5MDcucG5n/original/F9opsu.png" alt="Rock Rain 2"></td>
 </tr>
 <tr>
 <td>
-ESCAPE FROM MINOS<br>
+<b>ESCAPE FROM MINOS</b><br>
 An isometric game with procedural mazes.<br>
 https://rafavico.itch.io/escape-from-minos</td>
 <td><img src="https://img.itch.zone/aW1nLzIyOTAyMDkucG5n/original/LrYd4M.png" alt="Escape from Minos"></td>
 </tr>
 <tr>
 <td>
-ROOKIE HERO<br>
+<b>ROOKIE HERO</b><br>
 A fast action-platformer game with a lot of statistics.<br>
 https://rafavico.itch.io/rookie-hero</td>
 <td><img src="https://img.itch.zone/aW1nLzIzMzcxOTQucG5n/original/Yqcqzs.png" alt="Rookie Hero"></td>
