@@ -13,26 +13,27 @@ Exp Library is divided by:<br>
 # Games & Tools
 Games and tools using this library are:
 
-EXP APPLICATION
-With this application you can create a profile for using in games with Exp.
-https://rafavico.itch.io/expapp
+<img src="https://img.itch.zone/aW1hZ2UvNDQ3NDQ5LzIyNjA5NDEucG5n/347x500/ys%2F6UB.png" alt="Exp Application">
+EXP APPLICATION<br>
+With this application you can create a profile for using in games with Exp.<br>
+https://rafavico.itch.io/expapp<br><br>
 
-BATHYSCAPHE
-A little game to learn using the library.
-https://rafavico.itch.io/bathyscaphe
+BATHYSCAPHE<br>
+A little game to learn using the library.<br>
+https://rafavico.itch.io/bathyscaphe<br><br>
 
-ULTRATUMBA
-A puzzle game against the cpu or another player.
-https://rafavico.itch.io/ultratumba
+ULTRATUMBA<br>
+A puzzle game against the cpu or another player.<br>
+https://rafavico.itch.io/ultratumba<br><br>
 
-ROCK RAIN 2
-A platform game where you can play alone or with a friend.
-https://rafavico.itch.io/rock-rain-2
+ROCK RAIN 2<br>
+A platform game where you can play alone or with a friend.<br>
+https://rafavico.itch.io/rock-rain-2<br><br>
 
-ESCAPE FROM MINOS
-An isometric game with procedural mazes.
-https://rafavico.itch.io/escape-from-minos
+ESCAPE FROM MINOS<br>
+An isometric game with procedural mazes.<br>
+https://rafavico.itch.io/escape-from-minos<br><br>
 
-ROOKIE HERO
-A fast action-platformer game with a lot of statistics.
-https://rafavico.itch.io/rookie-hero
+ROOKIE HERO<br>
+A fast action-platformer game with a lot of statistics.<br>
+https://rafavico.itch.io/rookie-hero<br><br>
