@@ -14,6 +14,10 @@ Exp Library is divided by:<br>
 Is not the best written library because it was using only for my games.<br>
 Security is low or nothing. It have a simple way of offuscating the exp texts.
 
+# TODO
+
+First thing to do is convert code to simple C. With this the library can be used in BennuGD.
+
 # Games & Tools
 Games and tools using this library are:
 
